@@ -3,6 +3,7 @@ import { View, Text, TextInput, TouchableOpacity, StyleSheet, Image, Dimensions 
 import { useDispatch } from 'react-redux';
 import { LinearGradient } from 'expo-linear-gradient';
 import { login } from '../redux/actions/authActions';
+import Toast from 'react-native-toast-message';
 
 const { width } = Dimensions.get('window');
 
@@ -93,6 +94,7 @@ const LoginScreen = () => {
                     Don’t have an account? <Text style={styles.signupLink}>Sign up</Text>
                 </Text>
             </View>
+            <Toast />
         </LinearGradient>
     );
 };
